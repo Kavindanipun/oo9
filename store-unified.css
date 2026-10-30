@@ -1,0 +1,53 @@
+/* Glass & Case shared storefront visual system — both store pages */
+:root{--gc-accent:#ff971b;--gc-line:#303030;--gc-card:#050505}
+body{font-family:'DM Sans',Arial,sans-serif!important;background:#000;color:#fff}
+/* Matching hero, irrespective of collection */
+.hero-wrap,.cases-hero{width:calc(100% - clamp(24px,3.2vw,44px))!important;max-width:1756px!important;margin:clamp(12px,1.6vw,22px) auto 0!important;padding:0!important;height:clamp(340px,32vw,485px)!important;min-height:0!important;border:1px solid #252525!important;border-radius:clamp(22px,2.4vw,38px)!important;overflow:hidden!important;position:relative!important}
+.hero-wrap .banner{height:100%!important;min-height:0!important;border:0!important;border-radius:inherit!important}
+.cases-hero .hero-video{position:absolute!important;inset:0;width:100%;height:100%;object-fit:cover!important;object-position:center}
+.cases-hero .hero-shade{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(0,0,0,.58),rgba(0,0,0,.2),rgba(0,0,0,.58))}
+.hero-wrap .hero-content,.cases-hero .hero-content{position:relative;z-index:2;max-width:780px!important;width:100%!important;text-align:center!important;padding:24px!important;margin:auto!important}
+.hero-wrap .hero-content h1,.cases-hero .hero-content h1{font-family:'DM Sans',Arial,sans-serif!important;font-weight:800!important;letter-spacing:-.055em!important;line-height:1.05!important;font-size:clamp(39px,5vw,72px)!important;margin:12px 0!important}
+.hero-wrap .hero-content h1 em,.cases-hero .hero-content h1 em{font-family:inherit!important;font-weight:inherit!important;font-style:normal!important;color:#fff!important}
+.hero-wrap .eyebrow,.cases-hero .eyebrow{font-size:11px!important;letter-spacing:.2em!important;color:#ffc27d!important;font-weight:800!important}
+.hero-wrap .hero-sub,.cases-hero .hero-content>p:not(.eyebrow){font-size:15px!important;color:#ddd!important;line-height:1.5!important;margin:10px 0 18px!important}
+.hero-wrap .glass-search,.cases-hero .search{display:flex!important;align-items:center!important;gap:10px!important;width:min(660px,100%)!important;max-width:660px!important;min-height:70px!important;margin:16px auto 0!important;padding:8px!important;background:rgba(20,21,24,.75)!important;border:1px solid rgba(255,255,255,.48)!important;border-radius:19px!important;backdrop-filter:blur(14px)!important;box-shadow:0 12px 35px #0005!important}
+.hero-wrap .glass-search input,.cases-hero .search input{font:500 16px 'DM Sans',sans-serif!important;flex:1!important;min-width:0!important;border:0!important;outline:0!important;box-shadow:none!important;background:transparent!important;color:#fff!important;padding:10px 12px!important}
+.hero-wrap .glass-search button,.cases-hero .search button{height:52px!important;min-width:112px!important;padding:0 20px!important;border:0!important;border-radius:13px!important;background:var(--gc-accent)!important;color:#0b0b0b!important;font:800 14px 'DM Sans',sans-serif!important;cursor:pointer!important;flex-shrink:0!important}
+.hero-wrap .glass-search button:hover,.cases-hero .search button:hover{background:#ffb24f!important}
+/* Equal sidebar placement and dimensions */
+.catalog-wrap,.catalog{max-width:1800px!important;margin:0 auto!important;padding:14px clamp(12px,1.6vw,22px) 60px!important}
+.catalog-layout,.catalog .layout{display:grid!important;grid-template-columns:250px minmax(0,1fr)!important;gap:18px!important;align-items:start!important}
+.catalog .brand-sidebar,.catalog-wrap .filter-panel{grid-column:1!important;grid-row:1!important;position:sticky!important;top:86px!important;min-width:0!important;background:#050505!important;border:1px solid #292929!important;border-radius:22px!important;padding:18px!important;box-shadow:none!important}
+.catalog .main-area,.catalog-wrap .products-area{grid-column:2!important;grid-row:1!important;min-width:0!important}
+.catalog .sidebar-top h2,.catalog-wrap .filter-head h2{font-size:28px!important;line-height:1.1!important;letter-spacing:-.04em!important;margin:0!important}
+.catalog .sidebar-top button,.catalog-wrap .clear-btn{font-size:12px!important;color:var(--gc-accent)!important}
+/* Consistent product frames and card borders */
+.catalog .model-card,.catalog .cover-card,.catalog-wrap .phone-model-card,.catalog-wrap .product-card{border:1px solid #353535!important;background:var(--gc-card)!important;border-radius:18px!important;box-shadow:none!important;min-width:0!important;transition:border-color .15s ease!important}
+.catalog .model-card:hover,.catalog .cover-card:hover,.catalog-wrap .phone-model-card:hover,.catalog-wrap .product-card:hover{border-color:#ff971b!important;transform:none!important}
+.catalog .model-card,.catalog .cover-card{padding:10px!important}
+.catalog .model-photo,.catalog .cover-photo{border:1px solid #474747!important;border-radius:13px!important;background:#000!important;overflow:hidden!important}
+.catalog .model-photo img,.catalog .cover-photo img{background:#000!important;object-fit:contain!important}
+.catalog .model-card strong,.catalog .cover-card h3{font-family:'DM Sans',sans-serif!important;font-weight:800!important;letter-spacing:-.02em!important;font-size:clamp(13px,1.05vw,17px)!important;line-height:1.23!important}
+.catalog .link-label{font-size:12px!important;letter-spacing:0!important;color:var(--gc-accent)!important}
+.catalog .cover-card .view-button{border-radius:11px!important;background:var(--gc-accent)!important;color:#101010!important;font:800 12px 'DM Sans',sans-serif!important;letter-spacing:0!important;min-height:40px!important}
+.catalog .main-area h2,.catalog-wrap .products-area h2{font-family:'DM Sans',sans-serif!important;letter-spacing:-.045em!important}
+@media(min-width:761px){.catalog .case-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:14px!important}.catalog .case-grid.grid-two{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:760px){
+ .hero-wrap,.cases-hero{margin:0!important;width:100%!important;height:340px!important;border:0!important;border-radius:0!important;max-width:none!important}
+ .hero-wrap .banner{height:100%!important;min-height:0!important;border-radius:0!important}
+ .hero-wrap .hero-content,.cases-hero .hero-content{padding:16px!important}
+ .hero-wrap .hero-content h1,.cases-hero .hero-content h1{font-size:clamp(30px,8.4vw,42px)!important}
+ .hero-wrap .hero-sub,.cases-hero .hero-content>p:not(.eyebrow){font-size:13px!important}
+ .hero-wrap .glass-search,.cases-hero .search{min-height:60px!important;padding:6px!important;border-radius:16px!important}
+ .hero-wrap .glass-search button,.cases-hero .search button{min-width:88px!important;height:46px!important;padding:0 14px!important;font-size:13px!important}
+ .catalog-wrap,.catalog{padding:12px 12px 60px!important}
+ .catalog-layout,.catalog .layout{display:flex!important;flex-direction:column!important;gap:12px!important}
+ .catalog .brand-sidebar,.catalog-wrap .filter-panel{position:static!important;order:0!important;width:100%!important;padding:12px 14px!important;border-radius:18px!important}
+ .catalog .main-area,.catalog-wrap .products-area{order:1!important;width:100%!important}
+ .catalog .case-grid:not(.grid-two),.catalog .case-grid.grid-two,.catalog-wrap .model-card-grid,.catalog-wrap .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+ .catalog #case-products .case-grid.grid-two{grid-template-columns:1fr!important}
+ .catalog .model-card strong,.catalog .cover-card h3{font-size:12px!important}
+ .catalog .model-photo,.catalog .cover-photo{border-radius:12px!important}
+ .catalog .sidebar-top h2,.catalog-wrap .filter-head h2{font-size:26px!important}
+}

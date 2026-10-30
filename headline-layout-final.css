@@ -1,0 +1,81 @@
+/* Robust hero fix: navbar is a separate sibling, never reserve or overlap it. */
+@media (max-width:700px) {
+  body .gg-video-hero > .gg-sticky {
+    position:relative!important; top:auto!important;
+    display:flex!important; flex-direction:column!important;
+    height: min(76svh,720px)!important;
+    min-height:440px!important; max-height:none!important;
+    grid-template-rows:none!important;
+    padding:0!important; overflow:hidden!important;
+  }
+  body .gg-video-hero > .gg-sticky > .gg-heading {
+    position:relative!important; inset:auto!important; top:auto!important;
+    left:auto!important; right:auto!important; bottom:auto!important;
+    order:0!important; flex:0 0 auto!important;
+    display:block!important; height:auto!important;
+    width:100%!important; max-width:100%!important;
+    margin:0!important; padding:16px 10px 9px!important;
+    transform:none!important; opacity:1!important; visibility:visible!important;
+    z-index:10!important; text-align:center!important; overflow:visible!important;
+    background:#000!important;
+  }
+  body .gg-video-hero .gg-heading .gg-eyebrow,
+  body .gg-video-hero .gg-heading h1,
+  body .gg-video-hero .gg-heading .gg-subtitle {
+    display:block!important; visibility:visible!important; opacity:1!important;
+    position:relative!important; top:auto!important;
+    transform:none!important; clip:auto!important;
+  }
+  body .gg-video-hero .gg-heading h1 {
+    font-size:clamp(29px,9vw,43px)!important;
+    line-height:1.1!important; white-space:nowrap!important;
+    margin:3px auto!important;
+  }
+  body .gg-video-hero > .gg-sticky > .gg-showcase {
+    order:1!important; position:relative!important; grid-row:auto!important;
+    display:block!important; flex:1 1 0%!important; min-height:0!important;
+    width:100%!important; height:auto!important;
+    margin:0!important; overflow:hidden!important;
+  }
+  body .gg-video-hero .gg-media { height:100%!important; width:100%!important; }
+  body .gg-video-hero .gg-hero-video { object-fit:contain!important; }
+}
+
+/* Final mobile-only correction: explicit two-row grid, with no empty navbar row.
+   The navigation is outside this section, so reserving its row hides the title. */
+@media (max-width:700px) {
+  body .gg-video-hero > .gg-sticky {
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    grid-template-rows:max-content minmax(0,1fr)!important;
+    height:min(76svh,720px)!important;
+    min-height:440px!important;
+    overflow:hidden!important;
+  }
+  body .gg-video-hero > .gg-sticky > .gg-heading {
+    grid-column:1!important;
+    grid-row:1!important;
+    position:relative!important;
+    inset:auto!important;
+    order:initial!important;
+    padding:13px 10px 10px!important;
+    margin:0!important;
+    height:auto!important;
+    min-height:0!important;
+    z-index:5!important;
+    transform:none!important;
+    display:block!important;
+    opacity:1!important;
+    visibility:visible!important;
+  }
+  body .gg-video-hero > .gg-sticky > .gg-showcase {
+    grid-column:1!important;
+    grid-row:2!important;
+    order:initial!important;
+    position:relative!important;
+    height:100%!important;
+    min-height:0!important;
+    width:100%!important;
+    margin:0!important;
+  }
+}

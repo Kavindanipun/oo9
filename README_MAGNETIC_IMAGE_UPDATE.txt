@@ -1,0 +1,1 @@
+Magnetic Case photos replaced with user-supplied Brown, Cherry Red, Beige, Graphite, Orange and Blue. iPhone collection now displays before Samsung in Back Covers store only. Silicone Case photos unchanged. Phone-model compatibility and inventory remain unverified.

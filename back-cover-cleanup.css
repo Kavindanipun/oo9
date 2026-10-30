@@ -1,0 +1,13 @@
+/* Back Covers storefront targeted polish — 29 Oct 2026. */
+/* Keep the exterior card outline; remove only the duplicate image outline. */
+.catalog .model-card, .catalog .cover-card {border:1px solid #353535!important;}
+.catalog .model-photo, .catalog .cover-photo {border:0!important;outline:0!important;box-shadow:none!important;background:#000!important;}
+/* The model-list page is navigated by phone brand, not by case colour. */
+.catalog:has(#case-models:not([hidden])) .secondary-filters {display:none!important;}
+/* The colour options remain available after selecting a phone model, on desktop. */
+@media(max-width:760px){
+  /* Navbar has one divider only, below the full navigation row. */
+  .gg-nav .gg-nav-left {border-bottom:0!important;box-shadow:none!important;}
+  .gg-nav {border-bottom:1px solid #1c1c1c!important;margin-bottom:0!important;box-shadow:none!important;}
+  .gg-nav::after,.gg-nav-left::after {display:none!important;}
+}

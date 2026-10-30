@@ -1,0 +1,95 @@
+/* Glass & Case — Tempered Glass + Back Cover stores: identical hero / filter / heading alignment.
+   Loaded LAST on both pages. Only positions, sizes and alignment are unified; colours & imagery are untouched. */
+:root{--sa-pad:16px}
+/* ---------- HERO CONTENT: same anchor point on both pages ---------- */
+html body .hero-wrap .hero-content,
+html body .cases-hero .hero-content{
+  z-index:2!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;
+  box-sizing:border-box!important;position:absolute!important;inset:0!important;transform:none!important;
+  width:100%!important;max-width:none!important;height:100%!important;min-height:0!important;margin:0!important;padding:clamp(22px,3.2vw,44px) var(--sa-pad) 20px!important;text-align:center!important;
+}
+html body .hero-wrap .hero-content .eyebrow,
+html body .cases-hero .hero-content .eyebrow{
+  margin:0 0 12px!important;font-size:11px!important;line-height:1.4!important;letter-spacing:.2em!important;text-align:center!important;
+}
+html body .hero-wrap .hero-content h1,
+html body .cases-hero .hero-content h1{
+  margin:0 0 10px!important;line-height:1.05!important;text-align:center!important;
+  font-size:clamp(32px,8.6vw,42px)!important;white-space:normal!important;
+}
+html body .hero-wrap .hero-content > p.hero-sub,
+html body .cases-hero .hero-content > p.hero-sub{
+  margin:0 0 18px!important;font-size:13px!important;line-height:1.5!important;color:#ddd!important;text-align:center!important;max-width:34ch;
+}
+/* ---------- SEARCH BAR: identical box, icon, input and button ---------- */
+html body .hero-wrap .glass-search,
+html body .cases-hero .search{
+  display:flex!important;align-items:center!important;box-sizing:border-box!important;
+  width:100%!important;max-width:660px!important;height:60px!important;min-height:60px!important;max-height:60px!important;margin:0 auto!important;
+  padding:6px 6px 6px 14px!important;gap:8px!important;border-radius:16px!important;
+}
+html body .cases-hero .search .search-icon,
+html body .hero-wrap .glass-search .search-icon{width:22px!important;height:22px!important;flex:0 0 22px!important;stroke:#fff;stroke-width:2;fill:none}
+html body .hero-wrap .glass-search input,
+html body .cases-hero .search input{
+  flex:1 1 auto!important;min-width:0!important;padding:8px 4px!important;
+  font:500 15px/1.2 'DM Sans',Arial,sans-serif!important;color:#fff!important;text-align:left!important;
+}
+html body .hero-wrap .glass-search input::placeholder,
+html body .cases-hero .search input::placeholder{color:#fff!important;opacity:.9!important;font-weight:500!important}
+html body .hero-wrap .glass-search button,
+html body .cases-hero .search button{
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;text-align:center!important;
+  flex:0 0 auto!important;min-width:88px!important;height:46px!important;padding:0 16px!important;border-radius:12px!important;
+  font:800 13px/1 'DM Sans',Arial,sans-serif!important;gap:0!important;
+}
+html body .hero-wrap .hero-content > p.helper,
+html body .cases-hero .hero-content > p.helper{margin:14px 0 0!important;font-size:11px!important;line-height:1.4!important;color:#e1e8f3!important;text-align:center!important;text-shadow:0 2px 10px #000}
+/* ---------- FILTER PANEL: same spacing, type and dropdown ---------- */
+html body .catalog .brand-sidebar,
+html body .catalog-wrap .filter-panel{box-sizing:border-box!important;width:100%!important;margin:0!important;padding:14px 16px!important;border:1px solid #292929!important;border-radius:20px!important}
+html body .catalog .sidebar-top,
+html body .catalog-wrap .filter-head{display:flex!important;align-items:center!important;justify-content:space-between!important;margin:0 0 12px!important;padding:0 0 12px!important;border-bottom:1px solid #222!important}
+html body .catalog .sidebar-top h2,
+html body .catalog-wrap .filter-head h2{font-size:26px!important;line-height:1.1!important;margin:0!important;font-weight:800!important}
+html body .catalog .sidebar-top button,
+html body .catalog-wrap .clear-btn{font-size:12px!important;font-weight:700!important;color:#ff971b!important;padding:0!important;background:none!important;border:0!important}
+html body .catalog .filter-label,
+html body .catalog-wrap .filter-title{display:none!important}
+html body .catalog .brand-toggle,
+html body .catalog-wrap .mobile-brand-toggle{
+  display:flex!important;align-items:center!important;justify-content:space-between!important;box-sizing:border-box!important;
+  width:100%!important;height:48px!important;min-height:48px!important;margin:0!important;padding:0 14px!important;
+  border:1px solid #2f2f2f!important;border-radius:14px!important;background:#111!important;color:#fff!important;
+  font:700 14px/1 'DM Sans',Arial,sans-serif!important;text-align:left!important;
+}
+/* ---------- "Choose your phone model." heading + collection label ---------- */
+html body .catalog .main-area > h2,
+html body .catalog-wrap .products-top h2,
+html body .catalog .main-area h2:first-of-type{font-size:clamp(26px,7.4vw,32px)!important;line-height:1.1!important;margin:6px 0 14px!important;letter-spacing:-.045em!important;font-weight:800!important;background:transparent!important}
+html body .catalog-wrap .products-top{background:transparent!important;padding:0!important;margin:6px 0 0!important}
+html body .catalog-wrap .products-top h2{margin:0 0 10px!important}
+@media (min-width:761px){
+  html body .hero-wrap .hero-content h1,html body .cases-hero .hero-content h1{font-size:clamp(39px,5vw,72px)!important}
+  html body .hero-wrap .hero-content > p.hero-sub,html body .cases-hero .hero-content > p.hero-sub{font-size:15px!important;max-width:none}
+  html body .hero-wrap .glass-search,html body .cases-hero .search{height:70px!important;min-height:70px!important;max-height:70px!important;padding:8px 8px 8px 18px!important;border-radius:19px!important}
+  html body .hero-wrap .glass-search button,html body .cases-hero .search button{height:52px!important;min-width:112px!important;font-size:14px!important}
+  html body .hero-wrap .glass-search input,html body .cases-hero .search input{font-size:16px!important}
+  html body .hero-wrap .hero-content .eyebrow,html body .cases-hero .hero-content .eyebrow{margin-bottom:14px!important}
+}
+/* ---------- final polish ---------- */
+html body .hero-wrap .hero-content > p.hero-sub,
+html body .cases-hero .hero-content > p.hero-sub{max-width:100%!important}
+html body .catalog-wrap .filter-block.brand-only-filter,
+html body .catalog-wrap .filter-block.brand-only-filter .filter-title{border-top:0!important;margin-top:0!important;padding-top:0!important}
+html body .catalog-wrap .products-area,
+html body .catalog-wrap .models-view,
+html body .catalog-wrap .products-top,
+html body .catalog-wrap #brand-model-list{background:transparent!important}
+@media (max-width:360px){
+  html body .hero-wrap .glass-search,html body .cases-hero .search{padding-left:10px!important;gap:4px!important}
+  html body .hero-wrap .glass-search input,html body .cases-hero .search input{font-size:13px!important}
+  html body .hero-wrap .glass-search button,html body .cases-hero .search button{min-width:72px!important;padding:0 12px!important}
+  html body .cases-hero .search .search-icon,html body .hero-wrap .glass-search .search-icon{width:18px!important;height:18px!important;flex-basis:18px!important}
+}
+html body .catalog-wrap .filter-block.brand-only-filter{padding:0!important;margin:0!important;border:0!important}

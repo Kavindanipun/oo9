@@ -1,0 +1,43 @@
+/* Focused October mobile fixes; no visual redesign. */
+@media (max-width:700px) {
+  /* Header is already in document flow; don't reserve it twice inside hero. */
+  body .gg-video-hero > .gg-sticky {
+    height:calc(100svh - var(--site-nav-h,88px))!important;
+    min-height:450px!important;
+    grid-template-rows:0px auto minmax(0,1fr)!important;
+  }
+  body .gg-video-hero .gg-heading {
+    grid-row:2!important;
+    padding:14px 12px 8px!important;
+    margin:0 auto!important;
+    position:relative!important;
+    top:auto!important;
+    transform:none!important;
+    z-index:4!important;
+    overflow:visible!important;
+  }
+  body .gg-video-hero .gg-heading h1 {
+    font-size:clamp(27px,8.4vw,41px)!important;
+    line-height:1.17!important;
+    letter-spacing:-.065em!important;
+    max-width:100%!important;
+    white-space:nowrap!important;
+    overflow:visible!important;
+  }
+  body .gg-video-hero .gg-heading .gg-subtitle {line-height:1.4!important;max-width:100%!important;}
+}
+@media (max-width:760px) {
+  /* Lift only Back Cover hero text; keep video/canvas unchanged. */
+  .cases-hero .hero-content {transform:translateY(-32px)!important;}
+  /* Sorting uses only the Featured dropdown; controls remain on product view. */
+  .collection-tools .collection-sort-label {font-size:0!important;letter-spacing:0!important;}
+  .collection-tools .collection-sort-label select {font-size:12px!important;min-width:94px!important;max-width:110px!important;text-align:center!important;text-align-last:center!important;}
+  .collection-tools {min-width:0!important;gap:6px!important;}
+  .collection-tools .collection-count {flex:1 1 auto!important;min-width:0!important;font-size:10px!important;white-space:normal!important;}
+  /* Prevent double-tap zoom on swatches without prohibiting pinch-to-zoom elsewhere. */
+  #case-preview .preview-art,#case-preview .preview-colour-studio,
+  #case-preview .preview-colour-studio button,
+  .cover-card .card-swatches,.cover-card .card-swatches button {touch-action:manipulation!important;}
+}
+/* Center search button text consistently. */
+.glass-search button,.search button {display:inline-flex!important;align-items:center!important;justify-content:center!important;text-align:center!important;line-height:1.15!important;}

@@ -1,0 +1,55 @@
+/* Glass & Case — final mobile hero + centering layer (loaded last, all phones ≤700px) */
+@media (max-width:700px){
+  :root{--site-nav-h:88px}
+  /* Navbar is fixed, so push content below it — this is what was hiding the title */
+  html body main#home{padding-top:var(--site-nav-h)!important}
+  html body main#home > div.gc-mobile-hero-title{
+    display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;
+    min-height:0!important;padding:clamp(20px,5.5vw,30px) 16px clamp(8px,2.5vw,14px)!important;
+    background:#000!important;text-align:center!important;
+  }
+  html body main#home > div.gc-mobile-hero-title > p.gc-mh-eyebrow{
+    color:#ff971b!important;font:700 clamp(8px,2.4vw,10px)/1.5 'DM Sans',system-ui,sans-serif!important;
+    letter-spacing:.16em!important;margin:0 0 10px!important;text-align:center!important;
+  }
+  html body main#home > div.gc-mobile-hero-title > p.gc-mh-title{
+    font:500 clamp(40px,12.5vw,60px)/1.05 'Bodoni Moda',Georgia,serif!important;
+    letter-spacing:-.045em!important;white-space:nowrap!important;text-align:center!important;
+    background:linear-gradient(180deg,#fff 0%,#d9d6d0 60%,#b9b4aa 100%)!important;
+    -webkit-background-clip:text!important;background-clip:text!important;
+    color:transparent!important;-webkit-text-fill-color:transparent!important;
+  }
+  html body main#home > div.gc-mobile-hero-title > p.gc-mh-title > span{
+    background:linear-gradient(180deg,#ffd29a 0%,#ff971b 100%)!important;
+    -webkit-background-clip:text!important;background-clip:text!important;
+    color:transparent!important;-webkit-text-fill-color:transparent!important;
+  }
+  html body main#home > div.gc-mobile-hero-title > p.gc-mh-subtitle{
+    color:#c9c9c6!important;font-size:clamp(11px,3.3vw,13px)!important;margin:10px 0 0!important;text-align:center!important;
+  }
+  /* Hero video area: show whole phone, no cropping, fits any screen */
+  html body main#home > section.gg-video-hero > div.gg-sticky{
+    height:clamp(220px,64vw,400px)!important;
+  }
+  /* Navbar: centred links */
+  body>.gg-nav .gg-nav-left{justify-content:center!important;align-items:center!important;width:100%!important}
+  body>.gg-nav .gg-nav-left a{justify-content:center!important;text-align:center!important}
+
+  /* Case collection heading: two clean centred lines, never run under the WhatsApp button */
+  .case-collection .case-copy{text-align:center!important;align-items:center!important;padding-left:20px!important;padding-right:20px!important}
+  .case-collection h2{
+    text-align:center!important;font-size:clamp(34px,10.5vw,52px)!important;line-height:1.08!important;
+    margin-left:auto!important;margin-right:auto!important;max-width:100%!important;overflow-wrap:normal!important;
+  }
+  .case-collection h2 em{display:block!important}
+  .case-collection .case-copy p{text-align:center!important;margin-left:auto!important;margin-right:auto!important;max-width:34ch}
+}
+/* Buttons: text dead-centre on every device */
+.premium-gradient-cta,.case-cta,.impact-cta,.gc-everyday-cta,.gg-nav-contact{
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  text-align:center!important;gap:0!important;line-height:1.25!important;
+}
+/* WhatsApp floating button should respect iPhone safe areas */
+@media (max-width:700px){
+  [class*="whatsapp"],[class*="wa-float"],a[href^="https://wa.me"][style*="fixed"]{bottom:max(16px,env(safe-area-inset-bottom))!important;right:max(14px,env(safe-area-inset-right))!important}
+}

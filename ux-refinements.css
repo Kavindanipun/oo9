@@ -1,0 +1,43 @@
+/* UX refinements: keep the existing black/orange design. */
+/* Mobile header copy positioned slightly higher with matched hero dimensions */
+@media (max-width:760px){
+ .cases-hero,.hero-wrap{height:320px!important;min-height:320px!important}
+ .cases-hero .hero-content{transform:translateY(-14px)!important}
+ .cases-hero .hero-content h1{margin:8px 0!important}
+ /* Don't let the model-selection page show unnecessary layout controls */
+ body:has(#case-models:not([hidden])) .collection-tools .view-switch{display:none!important}
+ /* Keep filter checkboxes expanded only until a brand is picked */
+ .brand-options:not(.open){display:none!important}
+ /* Easy-to-understand product grid buttons */
+ body:has(#case-products:not([hidden])) .view-switch{gap:4px!important}
+ .view-switch button{width:auto!important;min-width:34px!important;height:30px!important;padding:3px 5px!important;display:inline-flex!important;align-items:center!important;gap:4px!important;justify-content:center!important}
+ .grid-label{display:inline!important;font-size:9px!important;letter-spacing:0!important;white-space:nowrap}
+ /* Product popup: colour choice immediately below picture, before details */
+ .preview-modal{display:flex!important;flex-direction:column!important;gap:10px!important;max-height:calc(100dvh - 24px)!important;padding:14px!important;padding-top:53px!important}
+ .preview-art{min-height:0!important;height:min(42dvh,330px)!important;flex:0 0 auto!important}
+ .preview-art img{height:100%!important;max-height:100%!important;object-fit:contain!important}
+ .preview-colour-studio{order:1!important;padding:10px 7px!important}
+ .preview-details{order:2!important;gap:9px!important}
+ .modal-close{position:absolute!important;top:8px!important;right:10px!important;width:38px!important;height:38px!important;display:grid!important;place-items:center!important;background:#292929!important;border:1px solid #666!important;border-radius:50%!important;font-size:28px!important;line-height:1!important;z-index:10!important}
+}
+.grid-label{display:none}
+.preview-colour-studio{text-align:center;padding:8px 12px;min-width:0}
+.preview-studio-label{color:#ff9b28;font:800 11px 'DM Sans',sans-serif;letter-spacing:.1em;margin:0 0 12px}
+.preview-colour-studio .swatches{display:flex;justify-content:center;gap:11px;margin:0 0 10px;flex-wrap:wrap}
+.preview-colour-studio .chosen{color:#fff;font:600 13px 'DM Sans',sans-serif;margin:4px 0}
+/* Align selects and actions without affecting brand identity */
+.collection-sort-label select,#sort-products{min-height:34px;line-height:1.2;text-align:center;text-align-last:center;padding:6px 22px 6px 10px;vertical-align:middle}
+button,.order-btn,.view-button{line-height:1.3}
+#case-products .view-switch{display:flex}
+
+#glass-products-head #catalog-title:empty{display:none!important} @media(max-width:760px){.hero-wrap .hero-content{transform:translateY(-8px)!important}}
+
+@media (min-width:761px){
+.preview-modal{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;grid-template-rows:auto 1fr!important;align-items:start!important}
+.preview-modal .preview-art{grid-column:1!important;grid-row:1 / span 2!important;align-self:stretch!important}
+.preview-modal .preview-colour-studio{grid-column:2!important;grid-row:1!important}
+.preview-modal .preview-details{grid-column:2!important;grid-row:2!important}
+.preview-modal .modal-close{z-index:12!important;top:8px!important;right:10px!important;width:40px!important;height:40px!important;background:#222!important;border:1px solid #555!important;border-radius:50%!important;display:grid!important;place-items:center!important;line-height:1!important}
+}
+/* Keep screenshot-matched hero visuals while lifting Back Cover mobile wording slightly. */
+@media(max-width:760px){.cases-hero .hero-content{transform:translateY(-19px)!important}}

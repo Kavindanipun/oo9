@@ -1,0 +1,53 @@
+/* Mobile homepage headline: stable overlay below the actual navbar. */
+@media (max-width: 700px) {
+  body .gg-video-hero > .gg-sticky {
+    position: relative !important;
+    isolation: isolate !important;
+    grid-template-rows: minmax(0,1fr) !important;
+  }
+  body .gg-video-hero .gg-heading {
+    display: block !important;
+    box-sizing: border-box !important;
+    position: absolute !important;
+    inset: 14px 0 auto 0 !important;
+    grid-row: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 8px 12px 14px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    z-index: 25 !important;
+    overflow: visible !important;
+    text-align: center !important;
+    pointer-events: none;
+    background: transparent !important;
+  }
+  body .gg-video-hero .gg-heading h1 {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: clamp(29px, 9vw, 42px) !important;
+    line-height: 1.14 !important;
+    letter-spacing: -.068em !important;
+    white-space: nowrap !important;
+    margin: 2px auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  body .gg-video-hero .gg-heading .gg-eyebrow,
+  body .gg-video-hero .gg-heading .gg-subtitle {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  body .gg-video-hero .gg-showcase {
+    grid-row: 1 !important;
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+  }
+}

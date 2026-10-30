@@ -1,0 +1,5 @@
+Updates: Back Cover product photo stage black; mobile 2/1 column toggle; brand filters single-select; removed browse-by-brand and duplicate brand headings on both stores; Back Cover signature heading matches Glass & Case font in white. Source product photos are unchanged.
+
+V4: Mobile hero title was hidden behind the fixed navbar -> main#home now has padding-top = navbar height (mobile-hero-final.css, loaded last). Title restyled (white/orange), CTA text centred, case heading centred on 2 lines. Hero video re-encoded: 28.8MB -> 2.3MB desktop (1280p) + 0.9MB mobile (720p, served via media query); mtb-details 10.4MB -> 0.8MB. Poster is preloaded so the hero shows instantly while video loads.
+
+V5: store-align.css (loaded last on tempered-glass-store.html and back-cover-store.html) makes both store heroes identical in layout: eyebrow, title, subtitle, search bar (same icon/size/button) and helper line sit at the same position; filter panel, "Phone Brands" dropdown and "Choose your phone model." heading unified. Back Cover hero got the same search icon + helper line as Tempered Glass. Verified at 320, 375, 412 and 1280px.
